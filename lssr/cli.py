@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from . import core
+
 
 def main(args: list[str]) -> None:
-    print(*args)
+    core.main(args)
