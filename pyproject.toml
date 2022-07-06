@@ -13,6 +13,13 @@ documentation = "https://github.com/seijinrosen/lssr"
 python = "^3.7"
 
 [tool.poetry.dev-dependencies]
+bandit = "^1.7.4"
+black = "^22.6.0"
+isort = "^5.10.1"
+pytest = "^7.1.2"
+pytest-cov = "^3.0.0"
+pytest-mock = "^3.8.2"
+tox = "^3.25.1"
 
 [tool.poetry.scripts]
 lssr = "lssr.__main__:main"
