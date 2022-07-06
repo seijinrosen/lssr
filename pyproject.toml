@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "lssr"
+version = "0.1.0"
+description = "Alternative ls command."
+license = "MIT"
+authors = ["seijinrosen <86702775+seijinrosen@users.noreply.github.com>"]
+readme = "README.md"
+homepage = "https://github.com/seijinrosen"
+repository = "https://github.com/seijinrosen/lssr"
+documentation = "https://github.com/seijinrosen/lssr"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+bandit = "^1.7.4"
+black = "^22.6.0"
+isort = "^5.10.1"
+pytest = "^7.1.2"
+pytest-cov = "^3.0.0"
+pytest-mock = "^3.8.2"
+tox = "^3.25.1"
+
+[tool.poetry.scripts]
+lssr = "lssr.__main__:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.coverage.report]
+exclude_lines = ['if __name__ == "__main__":']
+
+[tool.isort]
+profile = "black"
