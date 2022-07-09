@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lssr"
-version = "0.1.0"
+version = "0.2.0"
 description = "Alternative ls command."
 license = "MIT"
 authors = ["seijinrosen <86702775+seijinrosen@users.noreply.github.com>"]
@@ -11,6 +11,8 @@ documentation = "https://github.com/seijinrosen/lssr"
 
 [tool.poetry.dependencies]
 python = "^3.7"
+
+rich = "^12.4.4"
 
 [tool.poetry.dev-dependencies]
 bandit = "^1.7.4"
