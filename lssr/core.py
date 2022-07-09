@@ -1,24 +1,33 @@
 from __future__ import annotations
 
 from pathlib import Path
+from typing import Iterable
+
+from .util import console
 
 
-def lssr() -> list[Path]:
+def lssr(items: Iterable[Path]) -> tuple[list[Path], list[Path]]:
     dirs: list[Path] = []
     files: list[Path] = []
 
-    for p in Path().iterdir():
+    for p in items:
         if p.is_dir():
             dirs.append(p)
         else:
             files.append(p)
 
-    dirs.sort()
-    files.sort()
-
-    return [*dirs, *files]
+    return sorted(dirs), sorted(files)
 
 
 def main(args: list[str]) -> None:
-    items = lssr()
-    print(*items, sep="\n")
+    current_directory = Path()
+    items = current_directory.iterdir()
+    dirs, files = lssr(items)
+
+    message = f"{len(dirs) + len(files)} items ({len(dirs)} dirs, {len(files)} files)"
+    console.print(message)
+
+    for p in dirs:
+        console.print(p, style="blue")
+    for p in files:
+        console.print(p)
