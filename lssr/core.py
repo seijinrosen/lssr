@@ -27,7 +27,5 @@ def main(args: list[str]) -> None:
     message = f"{len(dirs) + len(files)} items ({len(dirs)} dirs, {len(files)} files)"
     console.print(message)
 
-    for p in dirs:
-        console.print(p, style="blue")
-    for p in files:
-        console.print(p)
+    console.print(*dirs, sep="\n", style="blue")
+    console.print(*files, sep="\n")
