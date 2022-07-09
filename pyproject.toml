@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lssr"
-version = "0.1.0"
+version = "0.2.0"
 description = "Alternative ls command."
 license = "MIT"
 authors = ["seijinrosen <86702775+seijinrosen@users.noreply.github.com>"]
