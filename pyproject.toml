@@ -12,6 +12,8 @@ documentation = "https://github.com/seijinrosen/lssr"
 [tool.poetry.dependencies]
 python = "^3.7"
 
+rich = "^12.4.4"
+
 [tool.poetry.dev-dependencies]
 bandit = "^1.7.4"
 black = "^22.6.0"
