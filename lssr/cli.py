@@ -4,7 +4,7 @@ from . import __version__, core
 
 
 def main(args: list[str]) -> None:
-    if "--version" in args:
+    if "--version" in args or "-V" in args:
         print(__version__)
         return
     core.main(args)
