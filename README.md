@@ -11,3 +11,17 @@ Alternative ls command.
 [![Downloads](https://pepy.tech/badge/lssr/month)](https://pepy.tech/project/lssr)
 [![Downloads](https://pepy.tech/badge/lssr/week)](https://pepy.tech/project/lssr)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+## Installation
+
+It supports Python 3.7+.
+
+```sh
+pip install lssr
+```
+
+## Usage
+
+```sh
+lssr
+```
