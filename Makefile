@@ -16,6 +16,7 @@ update:
 clean:
 	rm -r .venv/
 	rm -r .pytest_cache/
+	rm -r .tox/
 	rm -r htmlcov/
 	rm .coverage
 
