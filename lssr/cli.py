@@ -17,13 +17,21 @@ See https://github.com/seijinrosen/lssr for more information.\
 """
 
 
+def print_help_message() -> None:
+    console.print(HELP_MESSAGE)
+
+
+def print_version() -> None:
+    console.print(__version__)
+
+
 def main(args: list[str]) -> None:
     if includes(args, {"-h", "--help"}):
-        console.print(HELP_MESSAGE)
+        print_help_message()
         return
 
     if includes(args, {"-V", "--version"}):
-        console.print(__version__)
+        print_version()
         return
 
     core.main(args)
