@@ -7,7 +7,7 @@ from rich.table import Table
 
 from .util import console, ts2dt
 
-IGNORED_ITEMS = {".DS_Store"}
+# IGNORED_ITEMS = {".DS_Store"}
 
 
 def info_message(items: list[Path]) -> str:
@@ -17,8 +17,8 @@ def info_message(items: list[Path]) -> str:
 
 
 def colored(p: Path) -> str:
-    if p.name in IGNORED_ITEMS:
-        return "[dim]"
+    # if p.name in IGNORED_ITEMS:
+    #     return "[dim]"
     if p.is_dir():
         return "[blue]"
     return ""
