@@ -2,10 +2,10 @@ from __future__ import annotations
 
 from unittest.mock import MagicMock
 
-from pytest import fixture, mark
+from pytest import CaptureFixture, fixture, mark
 from pytest_mock import MockerFixture
 
-from lssr import cli, core
+from lssr import __version__, cli, core
 
 
 @fixture
@@ -72,3 +72,17 @@ def test_with_no_args(
     assert mock_print_help_message.call_count == 0
     assert mock_print_version.call_count == 0
     mock_core_main.assert_called_once_with([])
+
+
+def test_print_help_message(capsys: CaptureFixture[str]):
+    cli.print_help_message()
+    out, err = capsys.readouterr()
+    assert err == ""
+    assert "Alternative ls command." in out
+
+
+def test_print_version(capsys: CaptureFixture[str]):
+    cli.print_version()
+    out, err = capsys.readouterr()
+    assert err == ""
+    assert __version__ in out

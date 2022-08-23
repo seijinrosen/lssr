@@ -22,7 +22,7 @@ def print_help_message() -> None:
 
 
 def print_version() -> None:
-    console.print(__version__)
+    print(__version__)
 
 
 def main(args: list[str]) -> None:
