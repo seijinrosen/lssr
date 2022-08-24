@@ -44,7 +44,7 @@ def create_table(items: list[Path]) -> Table:
 def get_sorted_items(target_path: Path) -> list[Path]:
     if target_path.is_file():
         return [target_path]
-    return sorted(target_path.iterdir(), key=lambda x: (x.is_file(), x))
+    return sorted(target_path.iterdir(), key=lambda p: (p.is_file(), p.name))
 
 
 def main(args: list[str]) -> None:
