@@ -33,7 +33,10 @@ def create_table(items: list[Path]) -> Table:
     table.add_column("Size", justify="right")
     for i, p in enumerate(items, start=1):
         table.add_row(
-            str(i), colored(p) + p.name, ts2dt(p.stat().st_mtime), str(p.stat().st_size)
+            str(i),
+            colored(p) + p.name,
+            ts2dt(p.stat().st_mtime),
+            f"{p.stat().st_size:,}",
         )
     return table
 
