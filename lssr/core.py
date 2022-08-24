@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import sys
 from pathlib import Path
 
 from rich import box
@@ -38,7 +39,16 @@ def create_table(items: list[Path]) -> Table:
 
 
 def main(args: list[str]) -> None:
-    current_directory = Path()
-    items = sorted(current_directory.iterdir(), key=lambda x: (x.is_file(), x))
+    target_path = Path(next((arg for arg in args if not arg.startswith("-")), "."))
+
+    if not target_path.exists():
+        sys.exit(f"{target_path}: No such file or directory")
+
+    items = (
+        [target_path]
+        if target_path.is_file()
+        else sorted(target_path.iterdir(), key=lambda x: (x.is_file(), x))
+    )
+
     console.print(info_message(items))
     console.print(create_table(items))
