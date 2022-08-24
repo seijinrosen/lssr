@@ -1,8 +1,5 @@
-from pathlib import Path
-
 from lssr.core import get_sorted_items
-
-EXAMPLE_DIR = Path("tests/example_dir")
+from tests.conftest import EXAMPLE_DIR
 
 
 def test():
