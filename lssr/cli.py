@@ -8,6 +8,8 @@ Alternative ls command.
 
 [bold]Usage:[/bold]
   lssr
+  lssr path/to/target/dir
+  lssr /absolute/path/to/target/dir
 
 [bold]Global options:[/bold]
   [blue]-h, --help[/blue]      Show this help message and exit.

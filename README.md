@@ -12,16 +12,42 @@ Alternative ls command.
 [![Downloads](https://pepy.tech/badge/lssr/week)](https://pepy.tech/project/lssr)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-## Installation
+## インストール
 
-It supports Python 3.7+.
+Python 3.7 以上がインストールされていれば利用可能です。
 
 ```sh
 pip install lssr
 ```
 
-## Usage
+## 使い方
 
 ```sh
+# カレントディレクトリにあるアイテムを表示
 lssr
+
+# 指定したディレクトリにあるアイテムを表示（相対パス）
+lssr path/to/target/dir
+
+# 絶対パスでの指定
+lssr /absolute/path/to/target/dir
+
+# ヘルプを表示
+lssr -h
+lssr --help
+
+# バージョンを表示
+lssr -V
+lssr --version
 ```
+
+## `ls` コマンドとの違い
+
+アイテムの並び順が異なります。デフォルトで、以下の順序でアイテムが表示されます。
+
+- フォルダ -> ファイル
+- Unicode
+
+つまり、GitHub と同様の並び順になるはずです。
+
+また、ドットファイルを含んだリスト形式でのカラー表示がデフォルトです（`ls -AGl` と同等）。
