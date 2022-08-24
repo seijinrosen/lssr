@@ -11,7 +11,7 @@ from .util import console, ts2dt
 # IGNORED_ITEMS = {".DS_Store"}
 
 
-def info_message(items: list[Path]) -> str:
+def get_info_message(items: list[Path]) -> str:
     dir_count = sum(p.is_dir() for p in items)
     file_count = len(items) - dir_count
     return f"{len(items)} items ({dir_count} dirs, {file_count} files)"
@@ -55,5 +55,5 @@ def main(args: list[str]) -> None:
 
     sorted_items = get_sorted_items(target_path)
 
-    console.print(info_message(sorted_items))
+    console.print(get_info_message(sorted_items))
     console.print(create_table(sorted_items))
