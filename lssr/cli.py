@@ -11,6 +11,9 @@ Alternative ls command.
   lssr path/to/target/dir
   lssr /absolute/path/to/target/dir
 
+[bold]Options:[/bold]
+  [blue]-r, --reverse[/blue]   Reverse the output.
+
 [bold]Global options:[/bold]
   [blue]-h, --help[/blue]      Show this help message and exit.
   [blue]-V, --version[/blue]   Show program's version number and exit.

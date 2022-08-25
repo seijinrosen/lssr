@@ -24,3 +24,27 @@ def test():
         "亜",
     ]
     assert name_of_sorted_items == expected
+
+
+def test_reverse():
+    reversed_sorted_items = get_sorted_items(EXAMPLE_DIR, reverse=True)
+    name_of_reversed_sorted_items = [item.name for item in reversed_sorted_items]
+    expected = [
+        "亜",
+        "ア",
+        "あ",
+        "【",
+        "z_lower",
+        "a_lower",
+        "[",
+        "Z",
+        "A",
+        "9",
+        "10",
+        "1",
+        "0",
+        "-",
+        "!",
+        "dir",
+    ]
+    assert name_of_reversed_sorted_items == expected

@@ -32,6 +32,10 @@ lssr path/to/target/dir
 # 絶対パスでの指定
 lssr /absolute/path/to/target/dir
 
+# 出力を反転
+lssr -r
+lssr --reverse path/to/target/dir
+
 # ヘルプを表示
 lssr -h
 lssr --help
