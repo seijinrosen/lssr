@@ -47,8 +47,15 @@ def get_sorted_items(target_path: Path) -> list[Path]:
     return sorted(target_path.iterdir(), key=lambda p: (p.is_file(), p.name))
 
 
+def get_target_strpath(args: list[str]) -> str:
+    not_option_args = [x for x in args if not x.startswith("-")]
+    if not not_option_args:
+        return "."
+    return not_option_args[0]
+
+
 def main(args: list[str]) -> None:
-    target_path = Path(next((arg for arg in args if not arg.startswith("-")), "."))
+    target_path = Path(get_target_strpath(args))
 
     if not target_path.exists():
         sys.exit(f"{target_path}: No such file or directory")
