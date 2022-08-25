@@ -8,6 +8,8 @@ Alternative ls command.
 
 [bold]Usage:[/bold]
   lssr
+  lssr path/to/target/dir
+  lssr /absolute/path/to/target/dir
 
 [bold]Global options:[/bold]
   [blue]-h, --help[/blue]      Show this help message and exit.
@@ -22,7 +24,7 @@ def print_help_message() -> None:
 
 
 def print_version() -> None:
-    console.print(__version__)
+    print(__version__)
 
 
 def main(args: list[str]) -> None:
