@@ -42,8 +42,6 @@ def create_table(items: list[Path]) -> Table:
 
 
 def get_sorted_items(target_path: Path) -> list[Path]:
-    if target_path.is_file():
-        return [target_path]
     return sorted(target_path.iterdir(), key=lambda p: (p.is_file(), p.name))
 
 
@@ -60,7 +58,11 @@ def main(args: list[str]) -> None:
     if not target_path.exists():
         sys.exit(f"{target_path}: No such file or directory")
 
-    sorted_items = get_sorted_items(target_path)
+    if target_path.is_file():
+        console.print(target_path.name + " is file.")
+        console.print(create_table([target_path]))
+        return
 
+    sorted_items = get_sorted_items(target_path)
     console.print(get_info_message(sorted_items))
     console.print(create_table(sorted_items))

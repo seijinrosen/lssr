@@ -4,9 +4,7 @@ from tests.conftest import EXAMPLE_DIR
 
 def test():
     sorted_items = get_sorted_items(EXAMPLE_DIR)
-    name_of_sorted_items = [
-        item.name for item in sorted_items if item.name != ".DS_Store"
-    ]
+    name_of_sorted_items = [item.name for item in sorted_items]
     expected = [
         "dir",
         "!",
@@ -26,9 +24,3 @@ def test():
         "亜",
     ]
     assert name_of_sorted_items == expected
-
-
-def test_is_file():
-    target_path = EXAMPLE_DIR / "A"
-    sorted_items = get_sorted_items(target_path)
-    assert sorted_items == [target_path]
