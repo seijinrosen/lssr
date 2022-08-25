@@ -2,28 +2,29 @@ from __future__ import annotations
 
 from unittest.mock import MagicMock
 
-from pytest import CaptureFixture, fixture, mark
+import pytest
+from pytest import CaptureFixture
 from pytest_mock import MockerFixture
 
 from lssr import __version__, cli, core
 
 
-@fixture
+@pytest.fixture
 def mock_print_help_message(mocker: MockerFixture):
     yield mocker.patch.object(cli, cli.print_help_message.__name__, autospec=True)
 
 
-@fixture
+@pytest.fixture
 def mock_print_version(mocker: MockerFixture):
     yield mocker.patch.object(cli, cli.print_version.__name__, autospec=True)
 
 
-@fixture
+@pytest.fixture
 def mock_core_main(mocker: MockerFixture):
     yield mocker.patch.object(core, core.main.__name__, autospec=True)
 
 
-@mark.parametrize(
+@pytest.mark.parametrize(
     "args",
     [
         ["-h"],
@@ -44,7 +45,7 @@ def test_with_help_option(
     assert mock_core_main.call_count == 0
 
 
-@mark.parametrize(
+@pytest.mark.parametrize(
     "args",
     [
         ["-V"],

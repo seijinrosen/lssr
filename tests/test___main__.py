@@ -1,12 +1,12 @@
 from unittest.mock import MagicMock
 
-from pytest import fixture
+import pytest
 from pytest_mock import MockerFixture
 
 from lssr import __main__, cli
 
 
-@fixture
+@pytest.fixture
 def mock_cli_main(mocker: MockerFixture):
     yield mocker.patch.object(cli, cli.main.__name__, autospec=True)
 

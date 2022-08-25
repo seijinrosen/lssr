@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from pytest import mark
+import pytest
 
 from lssr.core import get_target_strpath
 
 
-@mark.parametrize(
+@pytest.mark.parametrize(
     ("args", "expected"),
     [
         ([], "."),
