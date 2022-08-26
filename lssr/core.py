@@ -14,14 +14,12 @@ from .util import console, includes, ts2dt
 
 @dataclass
 class Options:
-    reverse = False
+    reverse: bool
 
 
 def get_options(args: list[str]) -> Options:
-    options = Options()
-    if includes(args, {"-r", "--reverse"}):
-        options.reverse = True
-    return options
+    reverse = includes(args, {"-r", "--reverse"})
+    return Options(reverse=reverse)
 
 
 def get_info_message(items: list[Path]) -> str:
