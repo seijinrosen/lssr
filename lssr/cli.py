@@ -12,7 +12,9 @@ Alternative ls command.
   lssr /absolute/path/to/target/dir
 
 [bold]Options:[/bold]
-  [blue]-r, --reverse[/blue]   Reverse the output.
+  [blue]-r, --reverse[/blue]   Reverse the order of the sort.
+  [blue]-t[/blue]              Sort by descending time modified (most recently modified first).
+  [blue]-S[/blue]              Sort by size (largest file first).
 
 [bold]Global options:[/bold]
   [blue]-h, --help[/blue]      Show this help message and exit.

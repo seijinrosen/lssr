@@ -31,4 +31,4 @@ def test_dir(capsys: CaptureFixture[str]):
     out, err = capsys.readouterr()
     assert err == ""
     assert "is file." not in out
-    assert "16 items (1 dirs, 15 files)" in out
+    assert "17 items (1 dirs, 16 files)" in out
