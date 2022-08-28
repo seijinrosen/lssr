@@ -89,22 +89,15 @@ def get_sorted_items(
     reverse: bool = False,
     sort_mode: SortMode = SortMode.DEFAULT,
 ) -> list[Path]:
-    if sort_mode == SortMode.DEFAULT:
-        return sorted(
-            target_path.iterdir(), key=lambda p: (p.is_file(), p.name), reverse=reverse
-        )
-    if sort_mode == SortMode.MTIME:
-        return sorted(
-            target_path.iterdir(),
-            key=lambda p: (-p.stat().st_mtime, p.is_file(), p.name),
-            reverse=reverse,
-        )
-    if sort_mode == SortMode.SIZE:
-        return sorted(
-            target_path.iterdir(),
-            key=lambda p: (-p.stat().st_size, p.is_file(), p.name),
-            reverse=reverse,
-        )
+    def get_sort_key(p: Path):
+        if sort_mode == SortMode.DEFAULT:
+            return (p.is_file(), p.name)
+        if sort_mode == SortMode.MTIME:
+            return (-p.stat().st_mtime, p.is_file(), p.name)
+        if sort_mode == SortMode.SIZE:
+            return (-p.stat().st_size, p.is_file(), p.name)
+
+    return sorted(target_path.iterdir(), key=get_sort_key, reverse=reverse)
 
 
 def get_target_strpath(args: list[str]) -> str:
