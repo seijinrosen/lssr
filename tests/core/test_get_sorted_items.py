@@ -1,3 +1,4 @@
+import time
 from pathlib import Path
 
 from lssr.core import SortMode, get_sorted_items
@@ -117,6 +118,7 @@ def test_sort_by_mtime(tmp_path: Path):
     ]
     for name in file_names:
         (d / name).touch()
+        time.sleep(1)
     sorted_items = get_sorted_items(d, sort_mode=SortMode.MTIME)
     assert len([*d.iterdir()]) == 10
     assert [item.name for item in sorted_items] == [*reversed(file_names)]
@@ -139,6 +141,7 @@ def test_sort_by_mtime_reversed(tmp_path: Path):
     ]
     for name in file_names:
         (d / name).touch()
+        time.sleep(1)
     sorted_items = get_sorted_items(d, sort_mode=SortMode.MTIME, reverse=True)
     assert len([*d.iterdir()]) == 10
     assert [item.name for item in sorted_items] == file_names
