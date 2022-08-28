@@ -93,7 +93,7 @@ def get_sorted_items(
         if sort_mode == SortMode.DEFAULT:
             return (p.is_file(), p.name)
         if sort_mode == SortMode.MTIME:
-            return (-p.stat().st_mtime, p.is_file(), p.name)
+            return (-p.stat().st_mtime_ns, p.is_file(), p.name)
         if sort_mode == SortMode.SIZE:
             return (-p.stat().st_size, p.is_file(), p.name)
 
