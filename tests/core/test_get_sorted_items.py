@@ -19,7 +19,7 @@ def test():
         "Z",
         "[",
         "a_lower",
-        "size_200bytes",
+        "size_5000bytes",
         "z_lower",
         "あ",
         "ア",
@@ -36,7 +36,7 @@ def test_reverse():
         "ア",
         "あ",
         "z_lower",
-        "size_200bytes",
+        "size_5000bytes",
         "a_lower",
         "[",
         "Z",
@@ -56,7 +56,7 @@ def test_sort_by_size():
     sorted_items = get_sorted_items(EXAMPLE_DIR, sort_mode=SortMode.SIZE)
     item_names = [item.name for item in sorted_items]
     expected = [
-        "size_200bytes",
+        "size_5000bytes",
         "dir",
         "!",
         "-",
@@ -95,7 +95,7 @@ def test_sort_by_size_reversed():
         "-",
         "!",
         "dir",
-        "size_200bytes",
+        "size_5000bytes",
     ]
     assert item_names == expected
 
