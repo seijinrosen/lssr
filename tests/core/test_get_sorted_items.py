@@ -1,3 +1,4 @@
+import time
 from pathlib import Path
 
 from lssr.core import SortMode, get_sorted_items
@@ -19,9 +20,8 @@ def test():
         "Z",
         "[",
         "a_lower",
-        "size_200bytes",
+        "size_5000bytes",
         "z_lower",
-        "【",
         "あ",
         "ア",
         "亜",
@@ -36,9 +36,8 @@ def test_reverse():
         "亜",
         "ア",
         "あ",
-        "【",
         "z_lower",
-        "size_200bytes",
+        "size_5000bytes",
         "a_lower",
         "[",
         "Z",
@@ -58,7 +57,7 @@ def test_sort_by_size():
     sorted_items = get_sorted_items(EXAMPLE_DIR, sort_mode=SortMode.SIZE)
     item_names = [item.name for item in sorted_items]
     expected = [
-        "size_200bytes",
+        "size_5000bytes",
         "dir",
         "!",
         "-",
@@ -71,7 +70,6 @@ def test_sort_by_size():
         "[",
         "a_lower",
         "z_lower",
-        "【",
         "あ",
         "ア",
         "亜",
@@ -86,7 +84,6 @@ def test_sort_by_size_reversed():
         "亜",
         "ア",
         "あ",
-        "【",
         "z_lower",
         "a_lower",
         "[",
@@ -99,7 +96,7 @@ def test_sort_by_size_reversed():
         "-",
         "!",
         "dir",
-        "size_200bytes",
+        "size_5000bytes",
     ]
     assert item_names == expected
 
@@ -121,6 +118,7 @@ def test_sort_by_mtime(tmp_path: Path):
     ]
     for name in file_names:
         (d / name).touch()
+        time.sleep(1)
     sorted_items = get_sorted_items(d, sort_mode=SortMode.MTIME)
     assert len([*d.iterdir()]) == 10
     assert [item.name for item in sorted_items] == [*reversed(file_names)]
@@ -143,6 +141,7 @@ def test_sort_by_mtime_reversed(tmp_path: Path):
     ]
     for name in file_names:
         (d / name).touch()
+        time.sleep(1)
     sorted_items = get_sorted_items(d, sort_mode=SortMode.MTIME, reverse=True)
     assert len([*d.iterdir()]) == 10
     assert [item.name for item in sorted_items] == file_names

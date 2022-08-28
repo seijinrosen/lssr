@@ -18,5 +18,5 @@ jobs:
       - run: python -m pip install --upgrade pip setuptools wheel
       - run: python -m pip install poetry
       - run: poetry install
-      - run: lssr -S tests/example_dir
-      - run: lssr -t tests/example_dir
+      - run: poetry run lssr -S tests/example_dir
+      - run: poetry run lssr -t tests/example_dir
