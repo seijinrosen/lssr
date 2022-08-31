@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import platform
+
 from . import __version__, core
 from .util import console, includes
 
@@ -30,6 +32,7 @@ def print_help_message() -> None:
 
 def print_version() -> None:
     print(__version__)
+    print("Python", platform.python_version())
 
 
 def main(args: list[str]) -> None:
