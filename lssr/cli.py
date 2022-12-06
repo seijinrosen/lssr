@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import platform
-import shutil
+from pathlib import Path
 
 from . import __version__, core
 from .util import console, includes
@@ -32,9 +32,9 @@ def print_help_message() -> None:
 
 
 def print_version() -> None:
-    print("lssr:", __version__)
-    print("Python:", platform.python_version())
-    print("which:", shutil.which("lssr"))
+    console.print("lssr:  ", __version__)
+    console.print("Python:", platform.python_version())
+    console.print("from:  ", Path(__file__).parent)
 
 
 def main(args: list[str]) -> None:
