@@ -5,3 +5,4 @@ pnpm add --save-dev prettier
 pnpm add --save-dev cspell
 pre-commit install
 pre-commit uninstall
+pnpm dlx husky-init && pnpm install
