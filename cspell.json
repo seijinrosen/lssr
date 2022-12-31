@@ -1,16 +1,25 @@
 {
+  "ignorePaths": ["__pycache__", "htmlcov", "pnpm-lock.yaml"],
   "words": [
     "Autobuild",
     "autouse",
     "capsys",
     "codecov",
     "codeql",
+    "direnv",
+    "envlist",
+    "htmlcov",
+    "isort",
     "lssr",
+    "pnpm",
+    "pycache",
     "pypa",
     "pyperclip",
     "pypi",
     "pytest",
     "seijinrosen",
-    "setuptools"
+    "setuptools",
+    "testenv",
+    "venv"
   ]
 }
