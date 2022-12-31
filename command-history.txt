@@ -1,1 +1,2 @@
 poetry lock --no-update
+poetry add --group=dev pre-commit
