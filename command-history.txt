@@ -3,3 +3,5 @@ poetry add --group=dev pre-commit
 pre-commit sample-config > .pre-commit-config.yaml
 pnpm add --save-dev prettier
 pnpm add --save-dev cspell
+pre-commit install
+pre-commit uninstall
