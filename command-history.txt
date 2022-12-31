@@ -1,2 +1,3 @@
 poetry lock --no-update
 poetry add --group=dev pre-commit
+pre-commit sample-config > .pre-commit-config.yaml
