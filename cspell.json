@@ -6,7 +6,10 @@
     "capsys",
     "codecov",
     "codeql",
+    "direnv",
+    "envlist",
     "htmlcov",
+    "isort",
     "lssr",
     "pnpm",
     "pycache",
@@ -15,6 +18,8 @@
     "pypi",
     "pytest",
     "seijinrosen",
-    "setuptools"
+    "setuptools",
+    "testenv",
+    "venv"
   ]
 }
