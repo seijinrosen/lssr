@@ -6,6 +6,7 @@
     "codecov",
     "codeql",
     "lssr",
+    "pnpm",
     "pypa",
     "pyperclip",
     "pypi",
