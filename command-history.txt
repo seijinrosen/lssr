@@ -6,3 +6,4 @@ pnpm add --save-dev cspell
 pre-commit install
 pre-commit uninstall
 pnpm dlx husky-init && pnpm install
+poetry update gitpython

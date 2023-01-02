@@ -8,6 +8,7 @@
     "codeql",
     "direnv",
     "envlist",
+    "gitpython",
     "htmlcov",
     "isort",
     "lssr",
