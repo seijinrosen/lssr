@@ -1,6 +1,9 @@
 test:
 	poetry run pytest --capture=no --cov=lssr --cov-report=term-missing --cov-report=html
 
+git-reset:
+	git reset --soft HEAD^
+
 switch:
 	git switch --create develop
 
