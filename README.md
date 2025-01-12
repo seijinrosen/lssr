@@ -14,7 +14,7 @@ Alternative ls command.
 
 ## インストール
 
-Python 3.7 以上がインストールされていれば利用可能です。
+Python 3.9 以上がインストールされていれば利用可能です。
 
 ```sh
 pip install lssr
