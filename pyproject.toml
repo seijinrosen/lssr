@@ -16,7 +16,7 @@ rich = ">=12.4.4,<14.0.0"
 
 [tool.poetry.group.dev.dependencies]
 bandit = "^1.7.4"
-black = ">=22.12,<25.0"
+black = ">=22.12,<26.0"
 isort = ">=5.11.2,<7.0.0"
 pyperclip = "^1.8.2"
 pytest = ">=7.2,<9.0"
