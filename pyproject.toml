@@ -12,7 +12,7 @@ documentation = "https://github.com/seijinrosen/lssr"
 [tool.poetry.dependencies]
 python = "^3.9"
 
-rich = ">=12.4.4,<14.0.0"
+rich = ">=12.4.4,<15.0.0"
 
 [tool.poetry.group.dev.dependencies]
 bandit = "^1.7.4"
