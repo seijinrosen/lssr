@@ -7,7 +7,7 @@
   },
   "devDependencies": {
     "cspell": "^9.2.0",
-    "prettier": "^2.8.1",
+    "prettier": "^3.6.2",
     "husky": "^8.0.0"
   }
 }
