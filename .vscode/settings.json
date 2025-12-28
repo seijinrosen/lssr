@@ -14,6 +14,7 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "python.linting.banditArgs": ["--skip=B101,B404,B603,B607"],
   "python.linting.banditEnabled": true
 }
