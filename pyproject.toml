@@ -20,7 +20,7 @@ black = ">=22.12,<26.0"
 isort = ">=5.11.2,<8.0.0"
 pyperclip = "^1.8.2"
 pytest = ">=7.2,<9.0"
-pytest-cov = ">=4,<7"
+pytest-cov = ">=4,<8"
 pytest-mock = "^3.10.0"
 tox = "^4.0.11"
 
