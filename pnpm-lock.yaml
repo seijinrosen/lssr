@@ -375,8 +375,8 @@ packages:
     resolution: {integrity: sha512-uo0Z9JJeWzv8BG+tRcapBKNJ0dro9cLyczGzulS6EfeyAdeC9sbojtW6XwvYxJkEne9En+J2XEl4zyglVeIwFg==}
     engines: {node: '>=8'}
 
-  picomatch@4.0.3:
-    resolution: {integrity: sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==}
+  picomatch@4.0.7:
+    resolution: {integrity: sha512-qcJu88Q2IWqJsDD529JKMdwGm/dvInW4HvQnRwiH9JtihJvzGOscDtHE3x1pBKeUOTysQ8kVmLnJ2kJu7yhcGA==}
     engines: {node: '>=12'}
 
   prettier@3.7.4:
@@ -686,7 +686,7 @@ snapshots:
   cspell-glob@9.4.0:
     dependencies:
       '@cspell/url': 9.4.0
-      picomatch: 4.0.3
+      picomatch: 4.0.7
 
   cspell-grammar@9.4.0:
     dependencies:
@@ -759,9 +759,9 @@ snapshots:
 
   fast-json-stable-stringify@2.1.0: {}
 
-  fdir@6.5.0(picomatch@4.0.3):
+  fdir@6.5.0(picomatch@4.0.7):
     optionalDependencies:
-      picomatch: 4.0.3
+      picomatch: 4.0.7
 
   flatted@3.4.4: {}
 
@@ -790,7 +790,7 @@ snapshots:
     dependencies:
       callsites: 3.1.0
 
-  picomatch@4.0.3: {}
+  picomatch@4.0.7: {}
 
   prettier@3.7.4: {}
 
@@ -804,8 +804,8 @@ snapshots:
 
   tinyglobby@0.2.15:
     dependencies:
-      fdir: 6.5.0(picomatch@4.0.3)
-      picomatch: 4.0.3
+      fdir: 6.5.0(picomatch@4.0.7)
+      picomatch: 4.0.7
 
   vscode-languageserver-textdocument@1.0.12: {}
 
